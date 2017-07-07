@@ -87,7 +87,6 @@ const SignedInDrawerNav = DrawerNavigator({
     activeBackgroundColor: 'transparent',
     style: {
       marginTop: 0,
-      marginVertical: 0,
       paddingVertical: 0,
       borderWidth: 0,
     }

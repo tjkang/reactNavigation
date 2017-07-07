@@ -22,12 +22,8 @@ class HeaderButton extends Component {
   };
 
   render() {
-    const containerStyle = [styles.container];
-    if (Platform.OS === 'android') {
-      containerStyle.push({ top: 0 });
-    }
     return (
-      <View style={containerStyle}>
+      <View style={styles.container}>
         <Ionicons.Button
           name={this.props.icon}
           size={26}
@@ -45,7 +41,7 @@ const styles = StyleSheet.create({
   container: {
     // position absolutely in the top left corner
     ...StyleSheet.absoluteFillObject,
-    top: 20,
+    top: Platform.OS === 'ios' ? 20 : 0,
     left: 5,
     backgroundColor: 'transparent',
   },
