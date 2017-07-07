@@ -5,6 +5,7 @@ import {
   View,
   Text,
   StyleSheet,
+  Platform,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
@@ -21,8 +22,12 @@ class HeaderButton extends Component {
   };
 
   render() {
+    const containerStyle = [styles.container];
+    if (Platform.OS === 'android') {
+      containerStyle.push({ top: 0 });
+    }
     return (
-      <View style={styles.container}>
+      <View style={containerStyle}>
         <Ionicons.Button
           name={this.props.icon}
           size={26}

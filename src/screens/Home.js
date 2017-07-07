@@ -22,7 +22,7 @@ class Home extends Component {
           This is Home screen!
         </Text>
         <Button
-          onPress={() => navigate('HomeDetail', { id: '12345' })}
+          onPress={() => navigate('HomeDetail', { title: 'Detail', id: '12345' })}
           title="Go to Home Detail"
         />
         <Button

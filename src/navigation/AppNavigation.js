@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform } from 'react-native';
+import { Platform, StatusBar } from 'react-native';
 import {
   StackNavigator,
   DrawerNavigator,
@@ -117,7 +117,8 @@ export const createRootNavigator = (signedIn = false) => StackNavigator(
       headerMode: 'none',
       // In modal mode screen slides up from the bottom
       mode: 'modal',
-      initialRouteName: signedIn ? 'SignedIn' : 'SignedOut'
+      cardStyle: { paddingTop: StatusBar.currentHeight }, // for android
+      initialRouteName: signedIn ? 'SignedIn' : 'SignedOut',
     }
   );
 

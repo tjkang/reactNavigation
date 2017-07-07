@@ -1,7 +1,5 @@
-// import React from 'react';
-import {
-  StackNavigator,
-} from 'react-navigation';
+import { StatusBar } from 'react-native';
+import { StackNavigator } from 'react-navigation';
 
 import HomeScreen from '../screens/Home';
 import HomeDetailScreen from '../screens/HomeDetail';
@@ -20,11 +18,12 @@ const HomeStackNav = StackNavigator({
     navigationOptions: ({ navigation }) => ({
       // Customize header's title with user name passed to navigate()
       // You can pass any props you'd like. For instance: navigate('HomeDetail', { id: '123' }
-      // title: `id ${navigation.state.params.id}`,
+      title: navigation.state.params.title,
     })
   },
 }, {
   headerMode: 'screen',
+  // cardStyle: { paddingTop: StatusBar.currentHeight },
 });
 
 export default HomeStackNav;
