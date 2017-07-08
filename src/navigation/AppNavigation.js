@@ -17,7 +17,7 @@ import ProfileScreen from '../screens/Profile';
 import SettingsScreen from '../screens/Settings';
 import ModalScreen from '../screens/Modal';
 
-import Drawer from './Drawer';
+import Drawer from '../components/Drawer';
 
 const ICON_PREFIX = (Platform.OS === 'ios' ? 'ios' : 'md');
 const ICON_POSTFIX = (Platform.OS === 'ios' ? '-outline' : '');
